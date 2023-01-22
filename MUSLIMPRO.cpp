@@ -106,26 +106,24 @@ void doaDoa(){
     cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t---=DOA-DOA HARIAN=---\n";
     cout << "==============================================================================================" << endl;
-    cout << " \t\t\t\t----=DOA-DOA PILIHAN=----\n\n";
+    cout << " \t\t\t       ----=DOA-DOA PILIHAN=---\n\n";
     cout << " [1] DOA DI RUMAH\n\n";
-    cout << " [2] DOA PERLINDUNGAN\n\n";
-    cout << " [3] DOA KELUARGA\n\n";
-    cout << " [4] DOA LAINNYA\n\n";
-    cout << " [5] KUMPULAN DOA\n\n";
-    cout << " [6] MENU UTAMA\n\n";
-    cout << " [7] TUTUP PROGRAM\n\n";
+    cout << " [2] DOA KELUARGA\n\n";
+    cout << " [3] DOA LAINNYA\n\n";
+    cout << " [4] KUMPULAN DOA\n\n";
+    cout << " [5] MENU UTAMA\n\n";
+    cout << " [6] TUTUP PROGRAM\n\n";
     cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE DOA-DOA PILIHAN DI SEBELAH SINI (1/2/3/4/5/6/7) : "; cin >> pilih;
+    cout << " SILAHKAN PILIH DAN MASUKKAN KODE DOA-DOA PILIHAN DI SEBELAH SINI (1/2/3/4/5/6) : "; cin >> pilih;
 
     //percabangan switch
     switch(pilih){
     case 1:doaRumah();break;
-    case 2:doaPerlindungan();break;
-    case 3:doaKeluarga();break;
-    case 4:doaLainnya();break;
-    case 5:doaKumpulan();break;
-    case 6:menuUtama();break;
-    case 7:tutupProgram();break;
+    case 2:doaKeluarga();break;
+    case 3:doaLainnya();break;
+    case 4:doaKumpulan();break;
+    case 5:menuUtama();break;
+    case 6:tutupProgram();break;
     default :doaDoa();break;
     }
 }
@@ -137,7 +135,18 @@ void doaRumah(){
     cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t---=DOA DI RUMAH=---\n";
     cout << "==============================================================================================" << endl;
-
+    cout << " DOA MASUK RUMAH\n\n";
+    cout << " DOA KELUAR RUMAH\n\n";
+    cout << " DOA MASUK WC\n\n";
+    cout << " DOA KELUAR WC\n\n";
+    cout << " DOA SEBELUM MAKAN\n\n";
+    cout << " DOA SETELAH MAKAN\n\n";
+    cout << " DOA SEBELUM TIDUR\n\n";
+    cout << " DOA BANGUN TIDUR\n\n";
+    cout << " DOA TERBANGUN DI MALAM HARI\n\n";
+    cout << " DOA MEMAKAI PAKAIAN\n\n";
+    cout << " DOA MELEPAS PAKAIAN\n\n";
+    cout << " DOA BERCERMIN\n\n";
     cout << "==============================================================================================" << endl;
     cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
     cout << " [1] INGIN KEMBALI?\n";
@@ -156,38 +165,17 @@ void doaRumah(){
     } else {goto doarum;}
 }
 
-void doaPerlindungan(){
-    doaper:
-    system("CLS");
-    cout << "==============================================================================================" << endl;
-    cout << "\t\t\t\t---=DOA PERLINDUNGAN=---\n";
-    cout << "==============================================================================================" << endl;
-
-    cout << "==============================================================================================" << endl;
-    cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
-    cout << " [1] INGIN KEMBALI?\n";
-    cout << " [2] KE MENU UTAMA?\n";
-    cout << " [3] TUTUP PROGRAM?\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
-
-    //percabangan if
-    if (pilih==1){
-        doaDoa();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else {goto doaper;}
-}
-
 void doaKeluarga(){
     doakel:
     system("CLS");
     cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t---=DOA KELUARGA=---\n";
     cout << "==============================================================================================" << endl;
-
+    cout << " DOA MOHONKAN AMPUN KEDUA ORANG TUA\n\n";
+    cout << " DOA AGAR ANAK JADI SHALEH/SHALEHAH\n\n";
+    cout << " DOA MOHONKAN KELUARGA SAKINAH\n\n";
+    cout << " DOA DIBERI REZEKI YANG CUKUP\n\n";
+    cout << " DOA DIBERI REZEKI YANG HALAL DAN BAIK\n\n";
     cout << "==============================================================================================" << endl;
     cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
     cout << " [1] INGIN KEMBALI?\n";
@@ -212,7 +200,14 @@ void doaLainnya(){
     cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t---=DOA LAINNYA=---\n";
     cout << "==============================================================================================" << endl;
-
+    cout << " DOA SEBELUM BELAJAR\n\n";
+    cout << " DOA SETELAH BELAJAR\n\n";
+    cout << " DOA ILMU YANG BERMANFAAT\n\n";
+    cout << " DOA DIMUDAHKAN SEGALA URUSAN\n\n";
+    cout << " DOA MASUK MASJID\n\n";
+    cout << " DOA KELUAR MASJID\n\n";
+    cout << " DOA KETIKA BERSIN\n\n";
+    cout << " DOA KETIKA MARAH\n\n";
     cout << "==============================================================================================" << endl;
     cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
     cout << " [1] INGIN KEMBALI?\n";
@@ -349,8 +344,22 @@ void waktuSalat(){
             cout << salatFardhu[i] << "\t" << waktuSalatFardhu[i] << endl << endl;
         }
 
-        tutupWaktuSalat();
-        if (pilih!=1 || pilih!=2 || pilih!=3){
+            cout << "==============================================================================================" << endl;
+        cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
+        cout << " [1] INGIN KEMBALI?\n";
+        cout << " [2] KE MENU UTAMA?\n";
+        cout << " [3] TUTUP PROGRAM?\n";
+        cout << "==============================================================================================" << endl;
+        cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
+
+        //percabangan
+        if (pilih==1){
+            waktuSalat();
+        } else if (pilih==2) {
+            menuUtama();
+        } else if (pilih==3) {
+            tutupProgram();
+        } else {
             goto timesalatfardhu;
         }
     } else if (pilih==2) {
@@ -433,13 +442,68 @@ void azanIqamah(){
     cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t---=AZAN & IQAMAH=---\n";
     cout << "==============================================================================================" << endl;
-    cout << "\t\t     ----=PENJELASAN MENGENAI AZAN & IQAMAH=----\n\n";
+    cout << "\t\t     ----=PENJELASAN MENGENAI AZAN & IQAMAH=----\n\n\n";
 
-    cout << " [1] APA ITU MUSLIM PRO?\n\n";
-    cout << "  MUSLIM PRO ADALAH SEBUAH PROGRAM YANG MIRIP DENGAN APLIKASI-APLIKASI PEMBANTU SEORANG MUSLIM\n";
-    cout << " ATAU MUSLIMAH DALAM MELAKSANAKAN IBADAHNYA KEPADA ALLAH SWT DENGAN CARA MENYEDIAKAN ILMU-ILMU\n";
-    cout << " YANG BERHUBUNGAN DENGAN BERIBADAH KEPADA ALLAH SWT. PROGRAM MUSLIM PRO HANYALAH SEBUAH CONTOH\n";
-    cout << " PROGRAM SEDERHANA DARI APLIKASI-APLIKASI YANG DI JELASKAN TADI.\n\n";
+    cout << " [1] PENGERTIAN AZAN DAN IQAMAH\n\n";
+    cout << " - AZAN ADALAH PEMBERITAHUAN TENTANG SUDAH ATAU TELAH TIBA WAKTU SALAT.\n\n";
+    cout << " - IQAMAH DARI SEGI BAHASA ADALAH MENDIRIKAN, YAITU KATA-KATA SEBAGAI TANDA BAHWA SALAT FARDHU\n";
+    cout << " AKAN SEGERA DIMULAI.\n\n";
+    cout << " - ORANG YANG BIASA MENGUMANDANGKAN AZAN DISEBUT MUAZIN.\n\n";
+    cout << " - SALAT-SALAT SUNNAH TIDAK DIANJURKAN MENGGUNAKAN AZAN DAN IQAMAH, KECUALI SALAT SUNNAH YANG\n";
+    cout << " DISUNAHKAN BERJAMA'AH. SEPERTI SALAT TARAWIH, SALAT IDUL FOTRI, SALAT IDUL ADHA DAN LAIN-LAIN\n\n";
+    cout << " - AZAN DAN IQAMAH HUKUMNYA SUNAH MU'AKAD BAGI SALAT FARDHU, BAIK SALAT BERJAMA'AH MAUPUN SALAT\n";
+    cout << " SENDIRIAN. PELAKSANAANNYA DIANJURKAN DENGAN SUARA YANG KERAS, BERDIRI, DAN MENGHADAP KIBLAT.\n\n\n";
+
+    cout << " [2] SYARAT MUAZIN\n\n";
+    cout << "  1. ISLAM\n\n";
+    cout << "  2. TAMYIZ DAN LAKI-LAKI\n\n";
+    cout << "  3. AZAN DAN IQAMAH DILAKUKAN KETIKA BENAR-BENAR MASUK WAKTU SALAT\n\n";
+    cout << "  4. LAFAZH AZAN DAN IQAMAH DISERUKAN SECARA BERURUTAN DAN TERATUR\n\n\n";
+
+    cout << " [3] SUNAH MUAZIN\n\n";
+    cout << "  1. MUAZIN SUCI DARI HADAS\n\n";
+    cout << "  2. DILAKUKAN DENGAN BERDIRI DAN MENGHADAP KIBLAT\n\n";
+    cout << "  3. DISERUKAN DENGAN SUARA YANG NYARING DAN MERDU\n\n";
+    cout << "  4. TEMPATNYA YANG DIPAKAI KEDUDUKANNYA LEBIH TINGGI, AGAR SUARANYA KEDENGARAN LEBIH JAUH\n\n";
+    cout << "  5. MEMBACA SHALAWAT SETELAH SELESAI AZAN KEMUDIAN BERDOA\n\n";
+    cout << "  6. ANTARA AZAN DAN IQAMAH DISUNAHKAN MEMBACA DOA\n\n\n";
+
+    cout << " [4] LAFAZ AZAN\n\n";
+    cout << "  1. ALLAHU AKBAR ALLAHU AKBAR(2X)\n    \"ALLAH MAHA BESAR, ALLAH MAHA BESAR\"\n\n";
+    cout << "  2. ASYHADU AL LAA ILAAHA ILLALLAAH(2X)\n    \"AKU BERSAKSI, BAHWA TIADA TUHAN YANG WAJIB DI SEMBAH SELAIN ALLAH\"\n\n";
+    cout << "  3. ASYHADU ANNA MUHAMMADAR RASUULULLAAH(2X)\n    \"AKU BERSAKSI, BAHWA NABI MUHAMMAD ADALAH UTUSAN ALLAH\"\n\n";
+    cout << "  4. HAYYA'ALASH SHALAAH(2X)\n    \"MARILAH SALAT\"\n\n";
+    cout << "  5. HAYYA'ALL FALAAH(2X)\n    \"MARILAH MENCAPAI KEMENANGAN\"\n\n";
+    cout << "  6. ALLAHU AKBAR ALLAHU AKBAR(1X)\n    \"ALLAH MAHA BESAR\"\n\n";
+    cout << "  7. LAA ILAAHAILLALLAAH(1X)\n    \"TIADA TUHAN SELAIN ALLAH\"\n\n\n";
+
+    cout << " [5] MENJAWAB AZAN\n\n";
+    cout << "  NO LAFAZ\t\t\t\t\tJAWABAN AZAN\n\n";
+    cout << "  1. ALLAHU AKBAR ALLAHU AKBAR\t\t\tALLAHU AKBAR ALLAHU AKBAR\n\n";
+    cout << "  2. ASYHADU AL LAA ILAAHA ILLALLAAH\t\tASYHADU AL LAA ILAAHA ILLALLAAH\n\n";
+    cout << "  3. ASYHADU ANNA MUHAMMADAR RASUULULLAAH\tASYHADU ANNA MUHAMMADAR RASUULULLAAH\n\n";
+    cout << "  4. HAYYA'ALASH SHALAAH\t\t\tLA HAWLA WALAA QUWWATA ILLA BILLA HILL ALIYIL AZIM\n\n";
+    cout << "  5. HAYYA'ALL FALAAH\t\t\t\tLA HAWLA WALAA QUWWATA ILLA BILLA HILL ALIYIL AZIM\n\n";
+    cout << "  6. ALLAHU AKBAR ALLAHU AKBAR\t\t\tALLAHU AKBAR ALLAHU AKBAR\n\n";
+    cout << "  7. LAA ILAAHAILLALLAAH\t\t\tLAA ILAAHAILLALLAAH\n\n\n";
+
+    cout << " [6] DOA SETELAH AZAN\n\n";
+    cout << "  ALLAAHUMMA ROBBA HAADZIHID DA'WATIT TAAMMAH, WASHSHOLAATIL QOOIMAH, AATI MUHAMMADANIL\n";
+    cout << " WASHIILATA WAL FADHILLAH, WAB'ATSHU MAQOOMAM MAHMUUDANIL LADZII WA'ADTAH, INNAKA LAA\n";
+    cout << " TUKHLIFUL MII'AADZ.\n\n";
+    cout << "  \"YA ALLAH, SESUNGGUHNYA ENGKAU ADALAH PEMILIK PANGGILAN YANG SEMPURNA INI, DAN SALAT\n";
+    cout << " AKAN DIDIRIKAN. KARUNIAKANLAH KEPADA NABI MUHAMMAD AL WASILAH, DAN KARUNIA-KARUNIA YANG\n";
+    cout << " BANYAK. DAN KARUNIAKANLAH DIA SEBAGAIMANA TELAH ENGKAU JANJUKAN.\"\n\n\n";
+
+    cout << " [6] LAFAZ IQAMAH\n\n";
+    cout << "  1. ALLAHU AKBAR ALLAHU AKBAR(1X)\n    \"ALLAH MAHA BESAR, ALLAH MAHA BESAR\"\n\n";
+    cout << "  2. ASYHADU AL LAA ILAAHA ILLALLAAH(1X)\n    \"AKU BERSAKSI, BAHWA TIADA TUHAN YANG WAJIB DI SEMBAH SELAIN ALLAH\"\n\n";
+    cout << "  3. ASYHADU ANNA MUHAMMADAR RASUULULLAAH(1X)\n    \"AKU BERSAKSI, BAHWA NABI MUHAMMAD ADALAH UTUSAN ALLAH\"\n\n";
+    cout << "  4. HAYYA'ALASH SHALAAH(1X)\n    \"MARILAH SALAT\"\n\n";
+    cout << "  5. HAYYA'ALL FALAAH(1X)\n    \"MARILAH MENCAPAI KEMENANGAN\"\n\n";
+    cout << "  6. ALLAHU AKBAR ALLAHU AKBAR(1X)\n    \"ALLAH MAHA BESAR\"\n\n";
+    cout << "  7. LAA ILAAHAILLALLAAH(1X)\n    \"TIADA TUHAN SELAIN ALLAH\"\n\n";
+
     tutupAzanIqamah();
 }
 

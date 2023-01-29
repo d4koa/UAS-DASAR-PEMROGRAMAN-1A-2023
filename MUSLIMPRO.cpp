@@ -6,6 +6,12 @@ Kelas       : Teknik Informatika 1A
 Tanggal     : 12 Januari 2023
 */
 
+/*
+    PROGRAM MUSLIM PRO
+
+    MUSLIM PRO MERUPAKAN PROGRAM YANG CARA KERJANYA MIRIP DENGAN APLIKASI PEMBANTU IBADAH LAINNYA
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -20,46 +26,22 @@ void doaDoa();
 void AsmaulHusna();
 void waktuSalat();
 void azanIqamah();
-void zikirHarian();
-void shadaqahZakat();
+void Zakat();
 void tentangProgram();
 void tutupProgram();
 
 //sub fungsi doa harian
 void doaRumah();
-void doaPerlindungan();
 void doaKeluarga();
 void doaLainnya();
-void doaKumpulan();
+
 
 //struct waktu salat
 struct waktuSalatSunnah{
     string salat;
     string rakaat;
-    string ket;
     string waktu;
 }dhuha,qabliyah1,qabliyah2,qabliyah3,qabliyah4,qabliyah5,badiyah1,badiyah2,badiyah3,tasbih1,tasbih2,tahajjud1,tahajjud2,tahajjud3,istikharah,taubat;
-
-//sub fungsi zikir harian
-void zikirPagi();
-void zikirSore();
-void zikirSetelahSalat();
-
-//struct zikir
-struct zikir{
-
-};
-//sub fungsi perhitungan zakat
-void penjelasanShadaqah();
-void penjelasanZakat();
-void perhitunganZakat();
-
-//fungsi tutup program
-void tutupAsmaulHusna();
-void tutupWaktuSalat();
-void tutupAzanIqamah();
-void tutupShadaqahZakat();
-void tutupTentangProgram();
 
 //fungsi utama
 int main(){
@@ -71,31 +53,29 @@ int main(){
 void menuUtama(){
     //tampilan menu utama
     system("CLS");
-    cout << "============================================================================================" << endl;
+    cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t     ---=MUSLIM PRO=---" << endl;
-    cout << "============================================================================================" << endl << endl;
+    cout << "==============================================================================================" << endl;
     cout << " \t\t\t\t ----=FITUR MUSLIM PRO=----\n\n";
-    cout << " [1] DOA HARIAN\n\n";
+    cout << " [1] DOA HARIAN V\n\n";
     cout << " [2] ASMAUL HUSNA\n\n";
     cout << " [3] WAKTU SALAT\n\n";
     cout << " [4] AZAN & IQAMAH\n\n";
-    cout << " [5] ZIKIR HARIAN\n\n";
-    cout << " [6] SHADAQAH & ZAKAT\n\n";
-    cout << " [7] TENTANG PROGRAM\n\n";
-    cout << " [8] TUTUP PROGRAM\n\n";
-    cout << "============================================================================================" << endl;
+    cout << " [5] PENJELASAN ZAKAT\n\n";
+    cout << " [6] TENTANG PROGRAM\n\n";
+    cout << " [7] TUTUP PROGRAM\n\n";
+    cout << "==============================================================================================" << endl;
     cout << " SILAHKAN PILIH DAN MASUKKAN KODE FITUR MUSLIM PRO DI SEBELAH SINI (1/2/3/4/5/6/7/8) : " ; cin >> pilih;
 
     //percabangan switch
     switch(pilih){
     case 1:doaDoa();break;
     case 2:AsmaulHusna();break;
-    case 3:system("CLS");waktuSalat();break;
+    case 3:waktuSalat();break;
     case 4:azanIqamah();break;
-    case 5:zikirHarian();break;
-    case 6:shadaqahZakat();break;
-    case 7:tentangProgram();break;
-    case 8:tutupProgram();break;
+    case 5:Zakat();break;
+    case 6:tentangProgram();break;
+    case 7:tutupProgram();break;
     default :menuUtama();break;
     }
 }
@@ -103,50 +83,62 @@ void menuUtama(){
 //fungsi doa harian
 void doaDoa(){
     system("CLS");
-    cout << "==============================================================================================" << endl;
+    cout << "==================================================================================" << endl;
     cout << "\t\t\t\t---=DOA-DOA HARIAN=---\n";
-    cout << "==============================================================================================" << endl;
+    cout << "==================================================================================" << endl;
     cout << " \t\t\t       ----=DOA-DOA PILIHAN=---\n\n";
     cout << " [1] DOA DI RUMAH\n\n";
     cout << " [2] DOA KELUARGA\n\n";
     cout << " [3] DOA LAINNYA\n\n";
-    cout << " [4] KUMPULAN DOA\n\n";
-    cout << " [5] MENU UTAMA\n\n";
-    cout << " [6] TUTUP PROGRAM\n\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE DOA-DOA PILIHAN DI SEBELAH SINI (1/2/3/4/5/6) : "; cin >> pilih;
+    cout << " [4] MENU UTAMA\n\n";
+    cout << " [5] TUTUP PROGRAM\n\n";
+    cout << "==================================================================================" << endl;
+    cout << " SILAHKAN PILIH DAN MASUKKAN KODE DOA-DOA PILIHAN DI SEBELAH SINI (1/2/3/4/5) : "; cin >> pilih;
 
     //percabangan switch
     switch(pilih){
     case 1:doaRumah();break;
     case 2:doaKeluarga();break;
     case 3:doaLainnya();break;
-    case 4:doaKumpulan();break;
-    case 5:menuUtama();break;
-    case 6:tutupProgram();break;
+    case 4:menuUtama();break;
+    case 5:tutupProgram();break;
     default :doaDoa();break;
     }
 }
 
 //sub fungsi-fungsi doa harian
+//doa rumah
 void doaRumah(){
-    doarum:
+    //label
+    doarum :
     system("CLS");
     cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t---=DOA DI RUMAH=---\n";
     cout << "==============================================================================================" << endl;
     cout << " DOA MASUK RUMAH\n\n";
+    cout << " ALLAHUMMA INNII AS-ALUKA KHOIROL MAULIJI WA KHOIROL MAKHROJI BISMILLAAHI WA LAJNAA WA\n\n";
+    cout << " BISMILLAAHI KHOROJNAA WA'ALALLOHI ROBBINAA TAWAKKALNAA\n\n";
     cout << " DOA KELUAR RUMAH\n\n";
+    cout << " BISMILLAAHI TAWAKKALTU 'ALALLOHI WA LAA HAULAA WALAA QUWWATA ILAA BILLAAHI\n\n";
     cout << " DOA MASUK WC\n\n";
+    cout << " ALLOOHUMMA INNII A/UDZUBIKA MINAL KHUBUTSI WAL KHOBAA-ITS\n\n";
     cout << " DOA KELUAR WC\n\n";
+    cout << " ALHAMDULILLAAHIL LADZII ADZHABA 'ANNILADZAAWA 'AAFAANIII\n\n";
     cout << " DOA SEBELUM MAKAN\n\n";
+    cout << " ALLOOHUMMA BAARIK LANAA FIIMAA ROZAQTANAA WAQINAA 'ADZAABAN NAAR\n\n";
     cout << " DOA SETELAH MAKAN\n\n";
+    cout << " ALHAMDULILLAAHIL LADZII ATH'AMANAA WA SAQOONAAWAJA'ALANAA MUSLIMIIN\n\n";
     cout << " DOA SEBELUM TIDUR\n\n";
+    cout << " ALLAAHUMMA BISMIKA AHYAA WA BISMIKA AMUUT\n\n";
     cout << " DOA BANGUN TIDUR\n\n";
-    cout << " DOA TERBANGUN DI MALAM HARI\n\n";
+    cout << " ALHAMDULILLAAHIL LADZII AHYAANAA BA'DAMAA AMAATANAA WA-ILAIHIN NUSYUUR\n\n";
     cout << " DOA MEMAKAI PAKAIAN\n\n";
+    cout << " ALLOOHUMMA INNI AS-ALUKA MIN KHOIRIHI WA KHOIRIMAA HUWA LAHU, WA-A'UUDZUBIKA MIN SYARRIHI\n";
+    cout << " WASYARRIMAA HUWA LAH.\n\n";
     cout << " DOA MELEPAS PAKAIAN\n\n";
+    cout << " BISMILLAAHIL LADZII LAA ILAAHA ILLAA HUWA\n\n";
     cout << " DOA BERCERMIN\n\n";
+    cout << " ALHAMDULILLAAH, ALLOOHUMMA KAMAA HASSANTA KHOLQII FAHASSIN KHULUQII\n\n";
     cout << "==============================================================================================" << endl;
     cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
     cout << " [1] INGIN KEMBALI?\n";
@@ -155,27 +147,30 @@ void doaRumah(){
     cout << "==============================================================================================" << endl;
     cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
 
-    //percabangan if
-    if (pilih==1){
-        doaDoa();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else {goto doarum;}
+    //percabangan switch
+    switch (pilih){
+    case 1: doaDoa(); break;
+    case 2: menuUtama(); break;
+    case 3: tutupProgram(); break;
+    default : goto doarum;
+    }
 }
 
+//doa keluarga
 void doaKeluarga(){
-    doakel:
+    //label
+    doakel :
     system("CLS");
     cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t---=DOA KELUARGA=---\n";
     cout << "==============================================================================================" << endl;
     cout << " DOA MOHONKAN AMPUN KEDUA ORANG TUA\n\n";
+    cout << " RABBIGHFIR LII WALIWAA LIDAYYA WARHAMHUMAA KAMAA RABBAYAANII SHAGHIIROO\n\n";
     cout << " DOA AGAR ANAK JADI SHALEH/SHALEHAH\n\n";
+    cout << " RABBI HABLI MINAS-SHAALIHIIN\n\n";
     cout << " DOA MOHONKAN KELUARGA SAKINAH\n\n";
-    cout << " DOA DIBERI REZEKI YANG CUKUP\n\n";
-    cout << " DOA DIBERI REZEKI YANG HALAL DAN BAIK\n\n";
+    cout << " ROBBANNA HAB LANAA MIN AZWAAJINAA WADZURRIYYAATINAA QURROTA A'YUN, WAAJALNAA LILMUTTAQIINA\n";
+    cout << " IMAAMA\n\n";
     cout << "==============================================================================================" << endl;
     cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
     cout << " [1] INGIN KEMBALI?\n";
@@ -184,30 +179,37 @@ void doaKeluarga(){
     cout << "==============================================================================================" << endl;
     cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
 
-    //percabangan if
-    if (pilih==1){
-        doaDoa();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else {goto doakel;}
+    //percabangan switch
+    switch (pilih){
+    case 1: doaDoa(); break;
+    case 2: menuUtama(); break;
+    case 3: tutupProgram(); break;
+    default : goto doakel;
+    }
 }
 
+//doa lainnya
 void doaLainnya(){
+    //label
     doalai:
     system("CLS");
     cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t---=DOA LAINNYA=---\n";
     cout << "==============================================================================================" << endl;
     cout << " DOA SEBELUM BELAJAR\n\n";
-    cout << " DOA SETELAH BELAJAR\n\n";
-    cout << " DOA ILMU YANG BERMANFAAT\n\n";
+    cout << " RABBI ZIDNI ILMAN NAFI'A WARZUQNI FAHMA\n\n";
+    cout << " DOA MOHON ILMU YANG BERMANFAAT\n\n";
+    cout << " ALLAHUMMA INNI AS-ALUKA 'ILMAN NAAFI'AN, WA RIZQON THOYYIBAN, WA 'AMALAN MUTAQOBBALAN\n\n";
     cout << " DOA DIMUDAHKAN SEGALA URUSAN\n\n";
+    cout << " ALLAHUMMA LAA SAHLA ILLA MAA JA'ALTAHU SAHLAA, WA ANTA TAJ'ALUL HAZNA IDZA SYI'TA SAHLAA\n";
     cout << " DOA MASUK MASJID\n\n";
+    cout << " BISMILLAH, ALLOOHUMMA ALLOHUMMAFTAH LII ABWAABA ROHMATIK\n\n";
     cout << " DOA KELUAR MASJID\n\n";
+    cout << " BISMILLAH, ALLOOHUMMA INNI AS-ALUKA MIN FADHLIK\n\n";
     cout << " DOA KETIKA BERSIN\n\n";
+    cout << " ALHAMDULILLAH\n\n";
     cout << " DOA KETIKA MARAH\n\n";
+    cout << " A'-UUDZU BILLAHI MINAS SYAITHANIR RAJIIM\n\n";
     cout << "==============================================================================================" << endl;
     cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
     cout << " [1] INGIN KEMBALI?\n";
@@ -216,39 +218,13 @@ void doaLainnya(){
     cout << "==============================================================================================" << endl;
     cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
 
-    //percabangan if
-    if (pilih==1){
-        doaDoa();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else {goto doalai;}
-}
-
-void doaKumpulan(){
-    doakum:
-    system("CLS");
-    cout << "==============================================================================================" << endl;
-    cout << "\t\t\t\t---=KUMPULAN DOA=---\n";
-    cout << "==============================================================================================" << endl;
-
-    cout << "==============================================================================================" << endl;
-    cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
-    cout << " [1] INGIN KEMBALI?\n";
-    cout << " [2] KE MENU UTAMA?\n";
-    cout << " [3] TUTUP PROGRAM?\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
-
-    //percabangan if
-    if (pilih==1){
-        doaDoa();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else { goto doakum;}
+    //percabangan switch
+    switch (pilih){
+    case 1: doaDoa(); break;
+    case 2: menuUtama(); break;
+    case 3: tutupProgram(); break;
+    default : goto doalai;
+    }
 }
 
 //fungsi asmaul husna
@@ -286,11 +262,6 @@ void AsmaulHusna(){
     cout << " [92]YA NAFI'\t\t[93]YA NUUR\t\t[94]YA HAADII\t\t[95]YA BADII'\n\n";
     cout << " [96]YA BAAQII\t\t[97]YA WAARITS\t\t[98]YA RASYIID\t\t[99]YA SHABUUR\n\n";
 
-    tutupAsmaulHusna();
-}
-
-//fungsi tutup asmaul husna
-void tutupAsmaulHusna(){
     cout << "==============================================================================================" << endl;
     cout << " INGIN PERGI KE MENU UTAMA ATAU TUTUP PROGRAM?\n";
     cout << " [1] KE MENU UTAMA?\n";
@@ -298,13 +269,11 @@ void tutupAsmaulHusna(){
     cout << "==============================================================================================" << endl;
     cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2) : "; cin >> pilih;
 
-    //percabangan if
-    if (pilih==1){
-        menuUtama();
-    } else if (pilih==2) {
-        tutupProgram();
-    } else {
-        AsmaulHusna();
+    //percabangan switch
+    switch (pilih){
+    case 1: menuUtama(); break;
+    case 2: tutupProgram(); break;
+    default : AsmaulHusna();
     }
 }
 
@@ -313,38 +282,42 @@ void waktuSalat(){
     //array salat dan waktunya
     string salatFardhu[5] = {" SUBUH   "," DZUHUR  "," ASHAR   "," MAGHRIB "," ISYA    "};
     string waktuSalatFardhu[5] = {"03:58 ","11:25 ","14:50 ","17:29 ", "18:43 "};
+    string rakaatSalatFardhu[5] = {"2 RAKAAT", "4 RAKAAT", "4 RAKAAT", "3 RAKAAT", "4 RAKAAT"};
 
     //tampilan menu waktu salat dan goto
-    system("CLS");
+    //label
     timesalat:
-    cout << "============================================================================================" << endl;
+    system("CLS");
+    cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t---=WAKTU SALAT=---\n";
-    cout << "============================================================================================" << endl;
+    cout << "==============================================================================================" << endl;
 
     cout << " \t\t\t   ----=WAKTU SALAT PILIHAN=----\n\n";
     cout << " [1] WAKTU SALAT FARDHU\n\n";
     cout << " [2] WAKTU SALAT SUNNAH\n\n";
     cout << " [3] MENU UTAMA\n\n";
     cout << " [4] TUTUP PROGRAM\n\n";
-    cout << "============================================================================================" << endl;
+    cout << "==============================================================================================" << endl;
     cout << " SILAHKAN PILIH DAN MASUKKAN KODE WAKTU SALAT PILIHAN DI SEBELAH SINI (1/2/3/4) : "; cin >> pilih;
 
     //percabangan if... else if... else...
     if (pilih==1){
+        //label
         timesalatfardhu:
         system("CLS");
-        cout << "============================================================================================" << endl;
-        cout << " \t\t\t\t----=WAKTU SALAT PILIHAN=----\n";
-        cout << "============================================================================================" << endl;
-        cout << " \t\t\t       -----=JADWAL SALAT FARDHU=-----\n\n";
+        cout << "==============================================================================================" << endl;
+        cout << " \t\t----=WAKTU SALAT PILIHAN=----\n";
+        cout << "==============================================================================================\n" << endl;
+        cout << " JADWAL SALAT FARDHU\n";
+        cout << "==================================\n";
+        cout << " SHALAT \tWAKTU \tRAKAAT\n";
+        cout << "==================================\n\n";
 
-        cout << " SHALAT \tWAKTU\n\n";
         //perulangan for
-        for(i=0;i<=4;i++){
-            cout << salatFardhu[i] << "\t" << waktuSalatFardhu[i] << endl << endl;
-        }
+        for(i=0;i<=4;i++) {cout << salatFardhu[i] << "\t" << waktuSalatFardhu[i] << "\t" << rakaatSalatFardhu[i] << "\n\n";}
 
-            cout << "==============================================================================================" << endl;
+        //tutup
+        cout << "==============================================================================================" << endl;
         cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
         cout << " [1] INGIN KEMBALI?\n";
         cout << " [2] KE MENU UTAMA?\n";
@@ -352,17 +325,16 @@ void waktuSalat(){
         cout << "==============================================================================================" << endl;
         cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
 
-        //percabangan
-        if (pilih==1){
-            waktuSalat();
-        } else if (pilih==2) {
-            menuUtama();
-        } else if (pilih==3) {
-            tutupProgram();
-        } else {
-            goto timesalatfardhu;
-        }
-    } else if (pilih==2) {
+        //percabangan switch
+        switch (pilih){
+        case 1: waktuSalat(); break;
+        case 2: menuUtama(); break;
+        case 3: tutupProgram(); break;
+        default : goto timesalatfardhu;}
+    }
+    else if (pilih==2) {
+        //label
+        timesalatsunnah :
         //struct salat sunnah
         dhuha.salat="DHUHA\t\t";dhuha.rakaat="2 - 8 RAKAAT\t";dhuha.waktu="PUKUL 07:00-11:00 AM\n\n";
         qabliyah1.salat="QABLIYAH SUBUH\t";qabliyah1.rakaat="2 RAKAAT\t";qabliyah1.waktu="SETELAH AZAN DAN SEBELUM SALAT FARDHU SUBUH\n\n";
@@ -381,14 +353,14 @@ void waktuSalat(){
         istikharah.salat="ISTIKHARAH\t";istikharah.rakaat="2 RAKAAT\t";istikharah.waktu="WAKTUNYA BEBAS KECUALI PADA WAKTU DILARANG SALAT\n\n";
         taubat.salat="TAUBAT\t\t";taubat.rakaat="2 RAKAAT\t";taubat.waktu="WAKTUNYA BEBAS KECUALI PADA WAKTU DILARANG SALAT\n\n";
         system("CLS");
-        cout << "============================================================================================" << endl;
+        cout << "==============================================================================================" << endl;
         cout << " \t\t\t\t-----=WAKTU SALAT SUNNAH=-----\n";
-        cout << "============================================================================================\n" << endl;
-        cout << " \t\t\t\t-----=SALAT-SALAT SUNNAH=-----\n\n";
-        cout << "============================================================================================" << endl;
+        cout << "==============================================================================================\n" << endl;
+        cout << " SALAT-SALAT SUNNAH\n";
+        cout << "==============================================================================================" << endl;
         cout << " NAMA SALAT\t\tRAKAAT\t\tWAKTU\n";
-        cout << "============================================================================================" << endl;
-        cout << " SALAT " << dhuha.salat + dhuha.rakaat + dhuha.ket + dhuha.waktu;
+        cout << "==============================================================================================" << endl;
+        cout << " SALAT " << dhuha.salat + dhuha.rakaat + dhuha.waktu;
         cout << " SALAT " << qabliyah1.salat + qabliyah1.rakaat + qabliyah1.waktu;
         cout << " SALAT " << qabliyah2.salat + qabliyah2.rakaat + qabliyah2.waktu;
         cout << " SALAT " << badiyah1.salat + badiyah1.rakaat + badiyah1.waktu;
@@ -404,36 +376,26 @@ void waktuSalat(){
         cout << " SALAT " << tahajjud3.salat + tahajjud3.rakaat + tahajjud3.waktu;
         cout << " SALAT " << istikharah.salat + istikharah.rakaat + istikharah.waktu;
         cout << " SALAT " << taubat.salat + taubat.rakaat + taubat.waktu;
-        tutupWaktuSalat();
-    } else if (pilih==3) {
-        menuUtama();
-    } else if (pilih==4) {
-        tutupProgram();
-    } else {
-        system("CLS");
-        goto timesalat;
+
+        cout << "==============================================================================================" << endl;
+        cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
+        cout << " [1] INGIN KEMBALI?\n";
+        cout << " [2] KE MENU UTAMA?\n";
+        cout << " [3] TUTUP PROGRAM?\n";
+        cout << "==============================================================================================" << endl;
+        cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
+
+        //percabangan switch
+        switch (pilih){
+        case 1: waktuSalat(); break;
+        case 2: menuUtama(); break;
+        case 3: tutupProgram(); break;
+        default : goto timesalatsunnah;
+        }
     }
-
-}
-
-//fungsi tutup waktu salat
-void tutupWaktuSalat(){
-    cout << "==============================================================================================" << endl;
-    cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
-    cout << " [1] INGIN KEMBALI?\n";
-    cout << " [2] KE MENU UTAMA?\n";
-    cout << " [3] TUTUP PROGRAM?\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
-
-    //percabangan
-    if (pilih==1){
-        waktuSalat();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    }
+    else if (pilih==3) {menuUtama();}
+    else if (pilih==4) {tutupProgram();}
+    else {goto timesalat;}
 }
 
 //fungsi azan dan iqamah
@@ -504,11 +466,7 @@ void azanIqamah(){
     cout << "  6. ALLAHU AKBAR ALLAHU AKBAR(1X)\n    \"ALLAH MAHA BESAR\"\n\n";
     cout << "  7. LAA ILAAHAILLALLAAH(1X)\n    \"TIADA TUHAN SELAIN ALLAH\"\n\n";
 
-    tutupAzanIqamah();
-}
-
-//fungsi tutup azan dan iqamah
-void tutupAzanIqamah(){
+    //tutup azan dan iqamah
     cout << "==============================================================================================" << endl;
     cout << " INGIN PERGI KE MENU UTAMA ATAU TUTUP PROGRAM?\n";
     cout << " [1] KE MENU UTAMA?\n";
@@ -516,218 +474,88 @@ void tutupAzanIqamah(){
     cout << "==============================================================================================" << endl;
     cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2) : "; cin >> pilih;
 
-    //percabangan if else
-    if (pilih==1){
-        menuUtama();
-    } else if (pilih==2) {
-        tutupProgram();
-    } else {
-        azanIqamah();
-    }
+    //percabangan if tutup azan dan iqamah
+    if (pilih==1){menuUtama();}
+    else if (pilih==2) {tutupProgram();}
+    else {azanIqamah();}
 }
 
-//fungsi zikir harian
-void zikirHarian(){
+//fungsi zakat
+void Zakat(){
     system("CLS");
     cout << "==============================================================================================" << endl;
-    cout << "\t\t\t\t---=ZIKIR HARIAN=---\n";
-    cout << "==============================================================================================" << endl;
-    cout << "\t\t\t      ----=PILIHAN ZIKIR=-----\n\n";
-    cout << " [1] ZIKIR PAGI\n\n";
-    cout << " [2] ZIKIR SORE\n\n";
-    cout << " [3] ZIKIR SETELAH SALAT\n\n";
-    cout << " [4] MENU UTAMA\n\n";
-    cout << " [5] TUTUP PROGRAM\n\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN ZIKIR HARIAN DI SEBELAH SINI (1/2/3/4/5) : "; cin >> pilih;
-
-    //percabangan switch
-    switch(pilih){
-    case 1:zikirPagi();break;
-    case 2:zikirSore();break;
-    case 3:zikirSetelahSalat();break;
-    case 4:menuUtama();break;
-    case 5:tutupProgram();break;
-    default :zikirHarian();break;
-    }
-}
-
-//sub fungsi-fungsi zikir harian
-void zikirPagi(){
-    zikirpagi:
-    system("CLS");
-    cout << "==============================================================================================" << endl;
-    cout << "\t\t\t\t---=ZIKIR PAGI=---\n";
-    cout << "==============================================================================================" << endl;
-
-    cout << "==============================================================================================" << endl;
-    cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
-    cout << " [1] INGIN KEMBALI?\n";
-    cout << " [2] KE MENU UTAMA?\n";
-    cout << " [3] TUTUP PROGRAM?\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
-
-    //percabangan if
-    if (pilih==1){
-        zikirHarian();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else { goto zikirpagi;}
-}
-
-void zikirSore(){
-    zikirsore:
-    system("CLS");
-    cout << "==============================================================================================" << endl;
-    cout << "\t\t\t\t---=ZIKIR PAGI=---\n";
-    cout << "==============================================================================================" << endl;
-
-    cout << "==============================================================================================" << endl;
-    cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
-    cout << " [1] INGIN KEMBALI?\n";
-    cout << " [2] KE MENU UTAMA?\n";
-    cout << " [3] TUTUP PROGRAM?\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
-
-    //percabangan if
-    if (pilih==1){
-        zikirHarian();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else { goto zikirsore;}
-}
-
-void zikirSetelahSalat(){
-    zikirsetelahsalat:
-    system("CLS");
-    cout << "==============================================================================================" << endl;
-    cout << "\t\t\t\t---=ZIKIR PAGI=---\n";
-    cout << "==============================================================================================" << endl;
-
-    cout << "==============================================================================================" << endl;
-    cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
-    cout << " [1] INGIN KEMBALI?\n";
-    cout << " [2] KE MENU UTAMA?\n";
-    cout << " [3] TUTUP PROGRAM?\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
-
-    //percabangan if
-    if (pilih==1){
-        zikirHarian();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else { goto zikirsetelahsalat;}
-}
-
-//fungsi shadaqah dan zakat
-void shadaqahZakat(){
-    system("CLS");
-    cout << "==============================================================================================" << endl;
-    cout << "\t\t\t\t---=SHADAQAH & ZAKAT=---\n";
-    cout << "==============================================================================================" << endl;
-    cout << " \t\t\t   ----=PILIHAN SHADAQAH & ZAKAT=----\n\n";
-    cout << " [1] PENJELASAN SHADAQAH\n\n";
-    cout << " [2] PENJELASAN ZAKAT\n\n";
-    cout << " [3] PERHITUNGAN ZAKAT\n\n";
-    cout << " [4] MENU UTAMA\n\n";
-    cout << " [5] TUTUP PROGRAM\n\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN ZIKIR HARIAN DI SEBELAH SINI (1/2/3/4/5) : "; cin >> pilih;
-
-    //percabangan switch
-    switch(pilih){
-    case 1:penjelasanShadaqah();break;
-    case 2:penjelasanZakat();break;
-    case 3:perhitunganZakat();break;
-    case 4:menuUtama();break;
-    case 5:tutupProgram();break;
-    default :zikirHarian();break;
-    }
-}
-
-//sub fungsi-fungsi shadaqah & zakat
-void penjelasanShadaqah(){
-    penjelasanshadaqah:
-    system("CLS");
-    cout << "==============================================================================================" << endl;
-    cout << "\t\t\t\t---=PENJELASAN SHADAQAH=---\n";
-    cout << "==============================================================================================" << endl;
-
-    cout << "==============================================================================================" << endl;
-    cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
-    cout << " [1] INGIN KEMBALI?\n";
-    cout << " [2] KE MENU UTAMA?\n";
-    cout << " [3] TUTUP PROGRAM?\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
-
-    //percabangan if
-    if (pilih==1){
-        shadaqahZakat();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else { goto penjelasanshadaqah;}
-}
-
-void penjelasanZakat(){
-    penjelasanzakat:
-    system("CLS");
+    cout << "\t\t\t\t---=ZAKAT=---\n";
     cout << "==============================================================================================" << endl;
     cout << "\t\t\t\t---=PENJELASAN ZAKAT=---\n";
+    cout << "==============================================================================================" << endl << endl;
+    cout << " PENGERTIAN ZAKAT\n\n";
+    cout << " SECARA BAHASA\n";
+    cout << " ZAKAT DIARTIKAN BERSIH, TUMBUH, DAN BERKEMBANG.\n\n";
+    cout << " SECARA ISTILAH\n";
+    cout << " ZAKAT ADALAH MENGELUARKAN SEBAGIAN HARTA DENGAN JUMLAH TERTENTU SERTA DISERAHKAN KEPADA ORANG\n";
+    cout << " YANG BERHAK\n\n";
+    cout << " ZAKAT HUKUMNYA WAJIB. HAL INI, ALLAH PERINTAHKAN MELALUI FIRMAN-NYA :\n";
+    cout << " QS. AL-BAQARAH AYAT 43\n";
+    cout << " \"DAN DIRIKANLAH SALAT DAN TUNAIKANLAH ZAKAT!\"\n\n";
+    cout << " QS. AT-TAUBAH AYAT 103\n";
+    cout << " \"AMBILLAH ZAKAT DARI HARTA MEREKA GUNA MEMBERSIHKAN DAN MENYUCIKAN MEREKA.\"\n\n";
+    cout << " PEMBAGIAN ZAKAT\n\n";
+    cout << " 1. ZAKAT FITRAH(DIRI)\n";
+    cout << " PENGERTIAN\n";
+    cout << " ZAKAT FITRAH ADALAH ZAKAT YANG DIKELUARKAN BERUPA MAKANAN POKOK DARI SETIAP INDIVIDU DI BULAN\n";
+    cout << " RAMADAN.\n\n";
+    cout << " SYARAT ZAKAT FITRAH\n";
+    cout << " 1. ISLAM\n";
+    cout << " 2. ADA KELEBIHAN HARTA UNTUK KEBUTUHAN POKOK PADA MALAM HARI RAYA DAN SIANGNYA\n";
+    cout << " 3. MENDAPATI BAGIAN AWAL SAMPAI AKHIR RAMADAN WALAU SEBENTAR\n\n";
+    cout << " WAKTU\n";
+    cout << " DARI AWAL RAMADAN SAMPAI SEBELUM SELESAI SALAT IDUL FITRI\n\n";
+    cout << " UKURAN\n";
+    cout << " 1 SHA' = 4 MUD ATAU SEKITAR 2,5 KG\n\n";
+    cout << " 2. ZAKAT MAL(HARTA)\n";
+    cout << " PENGERTIAN\n";
+    cout << " ZAKAT YANG HARUS DIKELUARKAN ATAS KEPEMILIKAN HARTA APABILA TELAH MENCAPAI NISHAB DAN HAUL.\n\n";
+    cout << " SYARAT ZAKAT MAL\n";
+    cout << " 1. HAK MILIK SEMPURNA\n";
+    cout << " 2. HARTANYA BERKEMBANG (BERTAMBAH NILAI)\n";
+    cout << " 3. MENCAPAI NISHAB (BATAS MINIMAL)\n";
+    cout << " 4. HAUL (GENAP SATU TAHUN)\n\n";
+    cout << " JENIS HARTA YANG WAJID DIZAKATI";
+    cout << " 1. PERNIAGAAN\n";
+    cout << " 2. PERTANIAN\n";
+    cout << " 3. PETERNAKAN\n";
+    cout << " 4. PERTAMBANGAN\n";
+    cout << " 5. PROFESI\n";
+    cout << " 6. RIKAZ\n\n";
+    cout << " KETENTUAN-KETENTUAN ZAKAT MAL\n";
+    cout << " |----------------------------------------------------------------------------------|\n";
+    cout << " | HARTA\t| NISHAB\t\t   | WAKTU\t | KADAR \t\t    |\n";
+    cout << " |----------------------------------------------------------------------------------|\n";
+    cout << " | NIAGA        | SENILAI EMAS 85G         | 1 TAHUN     | 2,5%                     |\n";
+    cout << " | UNTA         | 5 EKOR                   | 1 TAHUN     | 1 DOMBA                  |\n";
+    cout << " | SAPI         | 30 EKOR                  | 1 TAHUN     | 1 SAPI (1 TAHUN)         |\n";
+    cout << " | KAMBING      | 40 EKOR                  | 1 TAHUN     | 1 DOMBA                  |\n";
+    cout << " | AYAM/IKAN/DLL| SENILAI EMAS 85G         | 1 TAHUN     | 2,5%                     |\n";
+    cout << " | PERTANIAN    | 1,4 TON (BERKULIT)       | PANEN       | 5% (PENGAIRAN BAYAR)     |\n";
+    cout << " | PERTANIAN    | 0,7 TON (TIDAK BERKULIT) | PANEN       | 10% (PENGAIRAN GRATIS)   |\n";
+    cout << " | EMAS         | 85G                      | 1 TAHUN     | 2,5%                     |\n";
+    cout << " | PERAK        | 595G                     | 1 TAHUN     | 2,5%                     |\n";
+    cout << " | PROFESI      | SENILAI EMAS 85G         | 1 TAHUN     | 2,5%                     |\n";
+    cout << " | RIKAZ        | TANPA NISHAB             | DITEMUKAN   | 20%                      |\n";
+    cout << " |----------------------------------------------------------------------------------|\n\n";
     cout << "==============================================================================================" << endl;
+    cout << " INGIN PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
+    cout << " [1] KE MENU UTAMA?\n";
+    cout << " [2] TUTUP PROGRAM?\n";
+    cout << "==============================================================================================" << endl;
+    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2) : "; cin >> pilih;
 
-    cout << "==============================================================================================" << endl;
-    cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
-    cout << " [1] INGIN KEMBALI?\n";
-    cout << " [2] KE MENU UTAMA?\n";
-    cout << " [3] TUTUP PROGRAM?\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
-
-    //percabangan if
-    if (pilih==1){
-        shadaqahZakat();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else { goto penjelasanzakat;}
-}
-
-void perhitunganZakat(){
-    perhitunganzakat:
-    system("CLS");
-    cout << "==============================================================================================" << endl;
-    cout << "\t\t\t\t---=PERHITUNGAN ZAKAT=---\n";
-    cout << "==============================================================================================" << endl;
-
-    cout << "==============================================================================================" << endl;
-    cout << " INGIN KEMBALI, PERGI KE MENU UTAMA, ATAU TUTUP PROGRAM?\n";
-    cout << " [1] INGIN KEMBALI?\n";
-    cout << " [2] KE MENU UTAMA?\n";
-    cout << " [3] TUTUP PROGRAM?\n";
-    cout << "==============================================================================================" << endl;
-    cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2/3) : "; cin >> pilih;
-
-    //percabangan if
-    if (pilih==1){
-        shadaqahZakat();
-    } else if (pilih==2) {
-        menuUtama();
-    } else if (pilih==3) {
-        tutupProgram();
-    } else { goto perhitunganzakat;}
+    //percabangan switch pilihan
+    switch(pilih){
+    case 1:menuUtama();break;
+    case 2:tutupProgram();break;
+    default :Zakat();break;
+    }
 }
 
 //fungsi tentang program
@@ -752,11 +580,7 @@ void tentangProgram(){
     cout << " SAYA DALAM MENYELESAIKAN TUGAS UAS INI, SEMOGA ALLAH SWT MEMBERIKAN KALIAN SEMUA BALASAN YANG\n";
     cout << " LEBIH BAIK DARI APA YANG KALIAN BERI, AAMIIN.\n\n";
 
-    tutupTentangProgram();
-}
-
-//fungsi tutup tentang program
-void tutupTentangProgram(){
+    //tutup tentang program
     cout << "==============================================================================================" << endl;
     cout << " INGIN PERGI KE MENU UTAMA ATAU TUTUP PROGRAM?\n";
     cout << " [1] KE MENU UTAMA?\n";
@@ -764,14 +588,13 @@ void tutupTentangProgram(){
     cout << "==============================================================================================" << endl;
     cout << " SILAHKAN PILIH DAN MASUKKAN KODE PILIHAN DI SEBELAH SINI (1/2) : "; cin >> pilih;
 
-    //percabangan if
-    if (pilih==1){
-        menuUtama();
-    } else if (pilih==2) {
-        tutupProgram();
-    } else {
-        tentangProgram();
+    //percabangan switch
+    switch (pilih){
+    case 1: menuUtama(); break;
+    case 2: tutupProgram(); break;
+    default : tentangProgram(); break;
     }
+
 }
 
 //fungsi tutup program
